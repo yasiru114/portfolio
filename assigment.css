@@ -804,7 +804,6 @@ body {
     color: #cccccc;
 }
 
-/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1102,20 +1101,41 @@ nav {
     font-weight: 500;
 }
 
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+/* MOBILE STYLES */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 2rem;
+    text-align: center;
+    transition: left 0.3s ease;
+  }
 
-    .about-hero h1 {
-        font-size: 2.5rem;
-    }
+  .nav-menu.active {
+    left: 0;
+  }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
+  .mobile-menu-btn {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
 
-    .personal-info {
-        padding: 2rem;
-    }
 }
