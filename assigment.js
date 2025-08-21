@@ -43,4 +43,21 @@ document.addEventListener("DOMContentLoaded", function () {
     heroImage.style.transform = `translateY(${rate}px)`;
     
   });
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+    
+
+    document.getElementById("successMessage").style.display = "block";
+
+
+    this.reset();
+
+
+    setTimeout(() => {
+        document.getElementById("successMessage").style.display = "none";
+    }, 5000);
+});
+
 });

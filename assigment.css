@@ -51,6 +51,14 @@ body {
     color: #ff6b35;
     text-decoration: none;
 }
+.footer {
+  background-color: ff6b35;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #7D5A2B;
+  margin-top: auto;
+}
 
 .nav-menu {
     display: flex;
@@ -567,6 +575,22 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
 }
+.success-message {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
 
 @keyframes slideInLeft {
@@ -725,4 +749,5 @@ body {
     .about-hero h1 {
         font-size: 2rem;
     }
+    
 }
